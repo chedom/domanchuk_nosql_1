@@ -112,9 +112,20 @@ printjson(res.executionStats);
 print("\n\n");
 // Завдання 3. Покривний запит
 print("Check covering index...");
-db.tracks.find({
+res = db.tracks.find({
   track_genre: "pop",
   popularity: { $gte: 70 }
+}).explain("executionStats");
+
+print(res.executionStats);
+
+res = db.tracks.find({
+  track_genre: "pop",
+  popularity: { $gte: 70 }
+}, {
+    _id: 0,
+    track_genre: 1,
+    popularity: 1,
 }).explain("executionStats");
 
 print(res.executionStats);
