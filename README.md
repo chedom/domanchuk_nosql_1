@@ -1,6 +1,6 @@
 Запуск завдань
-mongosh mongodb+srv://domanchukits_db_user:PCWUqazb8gYlAXeo@learnmongodb.a35nkey.mongodb.net/?appName=LearnMongoDB --file scripts/02_transform.js 
-mongosh mongodb+srv://domanchukits_db_user:PCWUqazb8gYlAXeo@learnmongodb.a35nkey.mongodb.net/?appName=LearnMongoDB --file queries/part2_queries.js
+mongosh mongodb+srv://user:passwd@learnmongodb.a35nkey.mongodb.net/?appName=LearnMongoDB --file scripts/02_transform.js 
+mongosh mongodb+srv://user:passwd@learnmongodb.a35nkey.mongodb.net/?appName=LearnMongoDB --file queries/part2_queries.js
 
 Завдання 1
 
