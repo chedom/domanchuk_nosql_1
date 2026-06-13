@@ -113,3 +113,15 @@ db.tracks.aggregate([
     { $sort: { avg_danceability: -1 } },
     { $limit: 1 },
 ]).forEach(doc => printjson(doc));
+
+print("Genre with the least tracks:");
+db.tracks.aggregate([
+    {
+        $group: {
+            _id: "$track_genre",
+            tracks_count: { $sum: 1 }
+        }
+    },
+    { $sort: { tracks_count: 1 } },
+    { $limit: 1 },
+]).forEach(doc => printjson(doc));
